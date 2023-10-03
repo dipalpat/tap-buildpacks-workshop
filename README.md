@@ -30,4 +30,4 @@
 * Participants to go through the steps above (30 minutes)
 * Feedback & Open Discussion (25 minutes)
 
-Total Workshop Duration - 4 Hours
+**Total Workshop Duration - 4 Hours**
