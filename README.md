@@ -21,7 +21,7 @@
 * Participants to go through the steps above (30 minutes)
 * Demo & Walkthrough - Build Customizations (25 minutes)
   * Create custom builder
-  * Services Binding
+  * Bindings
   * Use a different JRE than BellSoft Liberica
 * Participants to go through the steps above (30 minutes)
 * Demo & Walkthrough - Patch/Updates at scale (25 minutes)
