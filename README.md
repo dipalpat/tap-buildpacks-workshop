@@ -1,7 +1,10 @@
 # TAP Buildpacks Workshop
 
 ### Pre-requisites
-* To Be Added Soon
+* Kubectl CLI
+* Tanzu CLI & Plugins
+* kp CLI
+* k9s (optional)
 
 ### Agenda
 * Introduction & Setup (15 minutes)
