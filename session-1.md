@@ -9,23 +9,23 @@
     --build-env BP_JVM_VERSION=17 \
     --type web \
     --local-path . \
-    --tail \
     --annotation autoscaling.knative.dev/minScale=1 \
     --label app.kubernetes.io/part-of=petclinic \
     --label apps.tanzu.vmware.com/has-tests="true" \
+    --tail \    
     --yes
     ```
 * Execute in terminal - build with Kaniko
     ```shell
-    tanzu apps workload create petclinic-kaniko \
-    --git-repo https://github.com/jlafata/spring-petclinic \
-    --git-branch accelerator \
-    --param dockerfile=./Dockerfile \
+    tanzu apps workload create spring-petclinic-kaniko \
     --build-env BP_JVM_VERSION=17 \
     --type web \
+    --local-path . \
     --annotation autoscaling.knative.dev/minScale=1 \
     --label app.kubernetes.io/part-of=petclinic \
     --label apps.tanzu.vmware.com/has-tests="true" \
+    --param dockerfile=./Dockerfile \
+    --tail \
     --yes
    ```
 * View Image CR - Note latestImage and confirm with image in container in next step
