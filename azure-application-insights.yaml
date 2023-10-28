@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: azure-insights-build-bindings
+type: service.binding/ApplicationInsights
+stringData:
+  type: ApplicationInsights
+  provider: Azure

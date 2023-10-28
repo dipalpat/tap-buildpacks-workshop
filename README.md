@@ -24,9 +24,10 @@
   * View/Download SBOM through TDP/ Tanzu Insights CLI
 * Participants to go through the steps above (30 minutes)
 * Demo & Walkthrough - Build Customizations (25 minutes)
-  * Create custom builder
+  * Use a different JRE than BellSoft Liberica 
+    * Create Azure Java Buildpack
+    * Create custom builder
   * Bindings
-  * Use a different JRE than BellSoft Liberica
 * Participants to go through the steps above (30 minutes)
 * Demo & Walkthrough - Patch/Updates at scale (25 minutes)
   * Update Buildpack Version

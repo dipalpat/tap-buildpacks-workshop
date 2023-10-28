@@ -1,0 +1,22 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuilder
+metadata:
+  name: jammy-openjdk
+spec:
+  order:
+  - group:
+    - id: tanzu-buildpacks/java-native-image-lite
+  - group:
+    - id: tanzu-buildpacks/java-azure
+      version: 9.14.0
+  - group:
+    - id: tanzu-buildpacks/go-lite
+  - group:
+    - id: paketo-buildpacks/procfile
+  serviceAccountRef:
+    name: kp-default-repository-serviceaccount
+    namespace: kpack
+  stack:
+    kind: ClusterStack
+    name: default
+  tag: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-willing-monitor/buildservice:jammy-openjdk-builder
