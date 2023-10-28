@@ -1,7 +1,12 @@
 # Session 2
 * Create ClusterBuildpack Resource
+    ```shell
+    kubectl apply -f resources/azure-java-buildpack.yaml
+    ```
 * Create ClusterBuilder Resource
-* Change Tanzu Workload to use new ClusterBuilder
+    ```shell
+    kubectl apply -f resources/azure-java-builder.yaml
+    ```
 * Change spring-petclinic workload to use the new clusterbuilder
     ```shell
     tanzu apps workload apply spring-petclinic \
@@ -17,7 +22,7 @@
     ```
 * Create bindind secret to use Azure Application Insights
     ```shell
-    kubectl apply -f azure-application-insights.yaml
+    kubectl apply -f resources/azure-application-insights.yaml
     ```
 * Change spring-petclinic workload to use build time binding
     ```shell
@@ -36,7 +41,7 @@
   * Review Build logs to see Application Insights buildpacks participating
 * Create Secret that will hold connection information to Azure Application Insights Instance
     ```shell
-    kubectl apply -f azure-ai-secret.yaml
+    kubectl apply -f resources/azure-ai-secret.yaml
     ```
 * Add runtime configuration to send Metrics/Logs to Azure Application Insights
     ```shell
