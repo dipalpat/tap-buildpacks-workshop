@@ -1,8 +1,40 @@
 # Session 2
-* Create ClusterBuildpack Resource
+### Review deployed buildpacks, builders and stacks
+#### Buildpacks
+```shell
+tanzu build-service clusterbuildpack list
+```
+```shell
+tanzu build-service clusterbuildpack status java-lite-9.0.4
+```
+#### Stacks
+```shell
+tanzu build-service clusterbuilders list
+```
+```shell
+tanzu build-service clusterbuilders status default
+```
+#### Builders  
+```shell
+tanzu build-service clusterbuilders list
+```
+```shell
+tanzu build-service clusterbuilders status default
+```
+### Create ClusterBuildpack Resource
     ```shell
     kubectl apply -f resources/azure-java-buildpack.yaml
     ```
+    Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
+    ```shell
+    kp clusterbuildpack create azure-java-9.14.0 --image europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/java-azure@sha256:1b2cabe3290a15928d541e16738d4f7bf85dbd903baa500d833bb14d7e08f082  --dry-run --output yaml > azure-java-9.14.0.yaml
+    ```
+    Add ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
+    ``````shell
+    serviceAccountRef:
+      name: dependencies-pull-serviceaccount
+      namespace: build-service
+    ``````
 * Create ClusterBuilder Resource
     ```shell
     kubectl apply -f resources/azure-java-builder.yaml
