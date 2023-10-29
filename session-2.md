@@ -88,6 +88,7 @@ tanzu apps workload apply spring-petclinic \
 ```
   > Review Build logs to see Application Insights buildpacks participating
 #### Create Secret that will hold connection information to Azure Application Insights Instance
+Add the connection string to azure-ai-secrets.yaml before applying the resource
 ```shell
 kubectl apply -f resources/azure-ai-secret.yaml
 ```
@@ -106,3 +107,4 @@ tanzu apps workload apply spring-petclinic \
 --tail \
 --yes
 ```
+Check the Azure Application Insights to see the metrics
