@@ -12,7 +12,7 @@
     --annotation autoscaling.knative.dev/minScale=1 \
     --label app.kubernetes.io/part-of=petclinic \
     --label apps.tanzu.vmware.com/has-tests="true" \
-    --tail \    
+    --tail \
     --yes
     ```
 * Execute in terminal - build with Kaniko
