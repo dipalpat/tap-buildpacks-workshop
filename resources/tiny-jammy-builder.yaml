@@ -1,0 +1,21 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuilder
+metadata:
+  name: tiny-jammy
+spec:
+  order:
+  - group:
+    - id: tanzu-buildpacks/java-native-image-lite
+  - group:
+    - id: tanzu-buildpacks/java-lite
+  - group:
+    - id: tanzu-buildpacks/go-lite
+  - group:
+    - id: paketo-buildpacks/procfile
+  serviceAccountRef:
+    name: kp-default-repository-serviceaccount
+    namespace: kpack
+  stack:
+    kind: ClusterStack
+    name: tiny-jammy
+  tag: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice:tiny-jammy
