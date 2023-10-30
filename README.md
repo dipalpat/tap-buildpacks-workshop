@@ -9,8 +9,8 @@
 * Clone this repo locally. Most of the commands will be executed from this folder and spring-petclinic workload folder.
 
 ## Agenda
-* Introduction & Setup (15 minutes)
-* Why Cloud Native Buildpacks, and what problems are we trying to solve? (10 minutes)
+## Introduction & Setup (15 minutes)
+## Why Cloud Native Buildpacks, and what problems are we trying to solve? (10 minutes)
 
 ## Introduction to Tanzu Build Service (20 minutes)
   * Technical Architecture
