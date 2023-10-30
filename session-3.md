@@ -16,3 +16,16 @@ tanzu build-service clusterbuildpack status azure-java
 ```shell
 tanzu build-service build logs spring-petclinic
 ```
+### Update Stack
+Change the name in clusterstack-tiny-0.1.66.yaml to match the clusterstack name created in session 2 ex tiny-jammy-ns1. This will ensure only your resource is updated.
+```shell
+kubectl apply -f resources/clusterstack-tiny-0.1.66.yaml
+```
+#### Review ClusterStack Status
+```shell
+tanzu build-service clusterstack status your-cluster-stack
+```
+#### Check the latest build logs
+```shell
+tanzu build-service build logs spring-petclinic
+```
