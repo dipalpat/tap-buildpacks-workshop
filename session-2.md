@@ -1,26 +1,27 @@
 # Session 2
-### Review deployed buildpacks, builders and stacks
-#### Buildpacks
+## Review deployed buildpacks, builders and stacks
+### Buildpacks
 ```shell
 tanzu build-service clusterbuildpack list
 ```
 ```shell
 tanzu build-service clusterbuildpack status java-lite-9.0.4
 ```
-#### Stacks
+### Stacks
 ```shell
 tanzu build-service clusterstacks list
 ```
 ```shell
 tanzu build-service clusterstacks status default
 ```
-#### Builders  
+### Builders  
 ```shell
 tanzu build-service clusterbuilders list
 ```
 ```shell
 tanzu build-service clusterbuilders status default
 ```
+## Swap Bellsoft Liberica with Azure Java
 ### Create ClusterBuildpack Resource
 Edit resources/azure-java-buildpack-9.0.13.yaml file and change the name to something unique ex. azure-java-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
@@ -90,12 +91,12 @@ tanzu apps workload tail spring-petclinic --timestamp --since 1h
 ``````shell
 tanzu build-service build logs spring-petclinic
 ``````
-### Use Azure Application Insights APM with Buildpacks Bindings feature
+## Use Azure Application Insights APM with Buildpacks Bindings feature
 #### Create binding secret to use Azure Application Insights
 ```shell
 kubectl apply -f resources/azure-application-insights.yaml
 ```
-#### Change spring-petclinic workload to use build time binding
+### Change spring-petclinic workload to use build time binding
 ```shell
 tanzu apps workload apply spring-petclinic \
 --build-env BP_JVM_VERSION=17 \
@@ -111,7 +112,7 @@ tanzu apps workload apply spring-petclinic \
 tanzu apps workload tail spring-petclinic --timestamp --since 1h
 ```
   > Review Build logs to see Application Insights buildpacks participating
-#### Create Secret that will hold connection information to Azure Application Insights Instance
+### Create Secret that will hold connection information to Azure Application Insights Instance
 Add the connection string to azure-ai-secrets.yaml before applying the resource
 ```shell
 kubectl apply -f resources/azure-ai-secret.yaml
