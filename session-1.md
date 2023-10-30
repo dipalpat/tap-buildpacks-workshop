@@ -12,7 +12,6 @@
     --annotation autoscaling.knative.dev/minScale=1 \
     --label app.kubernetes.io/part-of=petclinic \
     --label apps.tanzu.vmware.com/has-tests="true" \
-    --tail \
     --yes
     ```
     ```shell
@@ -34,7 +33,6 @@
     --label app.kubernetes.io/part-of=petclinic \
     --label apps.tanzu.vmware.com/has-tests="true" \
     --param dockerfile=./Dockerfile \
-    --tail \
     --yes
    ```
     ```shell

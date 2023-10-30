@@ -82,8 +82,10 @@ tanzu apps workload apply spring-petclinic \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
 --param clusterBuilder=jammy-openjdk \
---tail \
 --yes
+```
+```shell
+tanzu apps workload tail spring-petclinic --timestamp --since 1h
 ```
 > Review the logs, build reason and check the detected buildpacks
 ``````shell
@@ -105,8 +107,10 @@ tanzu apps workload apply spring-petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
 --param clusterBuilder=jammy-openjdk \
 --param-yaml buildServiceBindings='[{"name": "azure-insights-build-bindings", "kind": "Secret"}]' \
---tail \
 --yes
+```
+```shell
+tanzu apps workload tail spring-petclinic --timestamp --since 1h
 ```
   > Review Build logs to see Application Insights buildpacks participating
 #### Create Secret that will hold connection information to Azure Application Insights Instance
@@ -126,7 +130,9 @@ tanzu apps workload apply spring-petclinic \
 --param clusterBuilder=jammy-openjdk \
 --param-yaml buildServiceBindings='[{"name": "azure-insights-build-bindings", "kind": "Secret"}]' \
 --service-ref service-binding-name=v1:Secret:azure-runtime-bindings \
---tail \
 --yes
+```
+```shell
+tanzu apps workload tail spring-petclinic --timestamp --since 1h
 ```
 Check the Azure Application Insights to see the metrics
