@@ -38,7 +38,7 @@ serviceAccountRef:
 ``````
 Check the status of clusterbuildpack
 ``````shell
-tanzu build-service clusterbuildpack status azure-java
+tanzu build-service clusterbuildpack status your-clusterbuildpack
 ``````
 ### Create ClusterStack Resource
 Edit cluster-tiny-0.1.65.yaml file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
@@ -77,7 +77,6 @@ Change the clusterBuilder param to match clusterbuilder created earlier.
 tanzu apps workload apply spring-petclinic \
 --build-env BP_JVM_VERSION=17 \
 --type web \
---local-path . \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
@@ -101,7 +100,6 @@ kubectl apply -f resources/azure-application-insights.yaml
 tanzu apps workload apply spring-petclinic \
 --build-env BP_JVM_VERSION=17 \
 --type web \
---local-path . \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
@@ -123,7 +121,6 @@ kubectl apply -f resources/azure-ai-secret.yaml
 tanzu apps workload apply spring-petclinic \
 --build-env BP_JVM_VERSION=17 \
 --type web \
---local-path . \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
