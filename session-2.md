@@ -69,7 +69,7 @@ Add KP CLI command to generate clusterbuilder resource - TBD
 ``````
 Check the status of cluster builder
 ``````shell
-tanzu build-service clusterbuilder status jammy-openjdk
+tanzu build-service clusterbuilder status your-cluster-builder
 ``````
 ### Change spring-petclinic workload to use the new clusterbuilder
 Change the clusterBuilder param to match clusterbuilder created earlier.
