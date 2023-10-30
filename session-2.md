@@ -42,7 +42,7 @@ Check the status of clusterbuildpack
 tanzu build-service clusterbuildpack status your-clusterbuildpack
 ``````
 ### Create ClusterStack Resource
-Edit resources/clusterstack-tiny-0.1.65.yaml file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit ***resources/clusterstack-tiny-0.1.65.yaml*** file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/clusterstack-tiny-0.1.65.yaml
 ```
@@ -50,7 +50,7 @@ kubectl apply -f resources/clusterstack-tiny-0.1.65.yaml
 * ```shell
   TBD
   ```
-* Replace ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
+* Replace ServiceAccountRef under spec in the file before applying if you are using YAML created by kp cli
 * ``````shell
   serviceAccountRef:
       name: dependencies-pull-serviceaccount
@@ -61,7 +61,7 @@ Check the status of clusterstack
 tanzu build-service clusterstack status your-cluster-stack
 ``````
 ### Create ClusterBuilder Resource
-Edit resources/azure-java-builder.yaml file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack anme to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit ***resources/azure-java-builder.yaml*** file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack anme to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/azure-java-builder.yaml
 ```
@@ -92,7 +92,8 @@ tanzu apps workload tail spring-petclinic --timestamp --since 1h
 tanzu build-service build logs spring-petclinic
 ``````
 ## Use Azure Application Insights APM with Buildpacks Bindings feature
-#### Create binding secret to use Azure Application Insights
+#### Create build time binding secret to use Azure Application Insights
+Apply ***resources/azure-application-insights.yaml*** as is.
 ```shell
 kubectl apply -f resources/azure-application-insights.yaml
 ```
@@ -112,8 +113,8 @@ tanzu apps workload apply spring-petclinic \
 tanzu apps workload tail spring-petclinic --timestamp --since 1h
 ```
   > Review Build logs to see Application Insights buildpacks participating
-### Create Secret that will hold connection information to Azure Application Insights Instance
-Add the connection string to azure-ai-secrets.yaml before applying the resource
+### Create Secret that will hold connection information of Azure Application Insights Instance
+Add the connection string to ***resources/azure-ai-secrets.yaml*** before applying the resource. This is runtime bindings.
 ```shell
 kubectl apply -f resources/azure-ai-secret.yaml
 ```
