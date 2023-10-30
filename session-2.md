@@ -22,7 +22,7 @@ tanzu build-service clusterbuilders list
 tanzu build-service clusterbuilders status default
 ```
 ### Create ClusterBuildpack Resource
-Edit this file and change the name to something unique ex. azure-java-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit resources/azure-java-buildpack-9.0.13.yaml file and change the name to something unique ex. azure-java-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/azure-java-buildpack-9.0.13.yaml
 ```
@@ -57,7 +57,7 @@ serviceAccountRef:
 ``````
 Check the status of clusterstack
 ``````shell
-tanzu build-service clusterbuildpack status your-cluster-stack
+tanzu build-service clusterstack status your-cluster-stack
 ``````
 ### Create ClusterBuilder Resource
 Edit this file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack anme to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.

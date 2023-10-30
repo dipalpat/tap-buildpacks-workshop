@@ -6,6 +6,7 @@
 * [Tanzu CLI Plugins](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/install-tanzu-cli.html#install-tanzu-cli-plugins-5)
 * [kp CLI](https://github.com/buildpacks-community/kpack-cli) (optional)
 * [k9s](https://k9scli.io/topics/install/) (optional)
+* Clone this repo locally. Most of the commands will be executed from this folder and spring-petclinic workload folder.
 
 ### Agenda
 * Introduction & Setup (15 minutes)
