@@ -1,4 +1,6 @@
-# Session 2
+# Session 2 - Tanzu Build Customizations
+This section relies on setup done in Session 1. 
+
 ## Review deployed buildpacks, builders and stacks
 ### Buildpacks
 ```shell

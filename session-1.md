@@ -1,4 +1,4 @@
-# Session 1
+# Session 1 - Tanzu Workload Build
 ## Initiate Tanzu Workloads with Cloud Native Buildpacks and Kaniko
 From the Tanzu Developer Portal, access Accelerators to select the application blueprint. In this exercise we will use ***petclinic***. 
 
