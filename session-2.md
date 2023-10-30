@@ -9,10 +9,10 @@ tanzu build-service clusterbuildpack status java-lite-9.0.4
 ```
 #### Stacks
 ```shell
-tanzu build-service clusterbuilders list
+tanzu build-service clusterstacks list
 ```
 ```shell
-tanzu build-service clusterbuilders status default
+tanzu build-service clusterstacks status default
 ```
 #### Builders  
 ```shell
