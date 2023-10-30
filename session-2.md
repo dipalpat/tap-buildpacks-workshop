@@ -60,7 +60,7 @@ Check the status of clusterstack
 tanzu build-service clusterstack status your-cluster-stack
 ``````
 ### Create ClusterBuilder Resource
-Edit this file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack anme to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit resources/azure-java-builder.yaml file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack anme to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/azure-java-builder.yaml
 ```
