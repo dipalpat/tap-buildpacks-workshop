@@ -2,20 +2,20 @@
 ## Initiate Tanzu Workloads with Cloud Native Buildpacks and Kaniko
 From the Tanzu Developer Portal, access Accelerators to select the application blueprint. In this exercise we will use ***petclinic***. 
 
-![acc](accelerators-on-tanzu-dev-portal.png)
+![acc](images/accelerators-on-tanzu-dev-portal.png)
 
 Search for ***petclinic*** and hit choose, leave the deploymentType as 'TAP workload' 
 
-![acc](petclinic-accelerator.png)
+![acc](images/petclinic-accelerator.png)
 
 Click Next and Click Generator Accelerator.
 
-![acc](generate-project.png)
+![acc](images/generate-project.png)
 
 
 Dowload the ZIP File and extract the project. Open it in the IDE of your choice.
 
-![acc](download-project.png)
+![acc](images/download-project.png)
 
 ### Tanzu Workload Apply with Cloud Native Buildpacks
 ```shell
@@ -68,9 +68,9 @@ tanzu build-service build logs spring-petclinic -b 1
 ### View SBOM
 Access the Supply Chain plugin and click on the workload
 
-![acc](supply-chain.png)
+![acc](images/supply-chain.png)
 
 On the Image Scanner step of the SupplyChain - View detected CVEs, Scan Policy, and options to download SBOMs.
 
-![acc](workload-sbom.png)
+![acc](images/workload-sbom.png)
 > (Optional) setup steps for [Tanzu Insights CLI](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/cli-plugins-insight-cli-configuration.html)
