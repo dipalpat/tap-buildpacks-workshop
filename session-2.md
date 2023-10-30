@@ -22,12 +22,13 @@ tanzu build-service clusterbuilders list
 tanzu build-service clusterbuilders status default
 ```
 ### Create ClusterBuildpack Resource
+Edit this file and change the name to something unique ex. azure-java-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
-kubectl apply -f resources/azure-java-buildpack.yaml
+kubectl apply -f resources/azure-java-buildpack-9.0.13.yaml
 ```
 Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
 ```shell
-kp clusterbuildpack create azure-java-9.14.0 --image europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/java-azure@sha256:1b2cabe3290a15928d541e16738d4f7bf85dbd903baa500d833bb14d7e08f082  --dry-run --output yaml > azure-java-9.14.0.yaml
+kp clusterbuildpack create azure-java --image europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/java-azure@sha256:4e677d8bfa9ffc0ddc2b4ae11b718b5b2d9f64b06867088ac2be7ed6708ef80d  --dry-run --output yaml > azure-java-9.13.0.yaml
 ```
 Add ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
 ``````shell
@@ -37,9 +38,10 @@ serviceAccountRef:
 ``````
 Check the status of clusterbuildpack
 ``````shell
-tanzu build-service clusterbuildpack status azure-java-9.14.0
+tanzu build-service clusterbuildpack status azure-java
 ``````
 ### Create ClusterBuilder Resource
+Edit this file and change the name to something unique ex. jammy-openjdk-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/azure-java-builder.yaml
 ```
@@ -51,6 +53,7 @@ Check the status of cluster builder
 tanzu build-service clusterbuilder status jammy-openjdk
 ``````
 ### Change spring-petclinic workload to use the new clusterbuilder
+Change the clusterBuilder param to match clusterbuilder created earlier.
 ```shell
 tanzu apps workload apply spring-petclinic \
 --build-env BP_JVM_VERSION=17 \

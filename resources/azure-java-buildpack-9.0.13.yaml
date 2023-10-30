@@ -1,0 +1,14 @@
+---
+apiVersion: kpack.io/v1alpha2
+kind: ClusterBuildpack
+metadata:
+  name: azure-java
+  annotations:
+    version: 9.13.0
+spec:
+  serviceAccountRef:
+    name: dependencies-pull-serviceaccount
+    namespace: build-service
+  image: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/java-azure@sha256:4e677d8bfa9ffc0ddc2b4ae11b718b5b2d9f64b06867088ac2be7ed6708ef80d
+  # registry.tanzu.vmware.com/tanzu-java-azure-buildpack/java-azure:9.13.0
+  #4e677d8bfa9ffc0ddc2b4ae11b718b5b2d9f64b06867088ac2be7ed6708ef80d
