@@ -30,7 +30,7 @@ Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust th
 ```shell
 kp clusterbuildpack create azure-java --image us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice/java-azure@sha256:4e677d8bfa9ffc0ddc2b4ae11b718b5b2d9f64b06867088ac2be7ed6708ef80d  --dry-run --output yaml > azure-java-9.13.0.yaml
 ```
-Add ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
+Replace ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
 ``````shell
 serviceAccountRef:
     name: dependencies-pull-serviceaccount
@@ -41,7 +41,7 @@ Check the status of clusterbuildpack
 tanzu build-service clusterbuildpack status your-clusterbuildpack
 ``````
 ### Create ClusterStack Resource
-Edit cluster-tiny-0.1.65.yaml file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit resources/clusterstack-tiny-0.1.65.yaml file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/clusterstack-tiny-0.1.65.yaml
 ```
@@ -49,7 +49,7 @@ Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust th
 ```shell
 TBD
 ```
-Add ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
+Replace ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
 ``````shell
 serviceAccountRef:
     name: dependencies-pull-serviceaccount
