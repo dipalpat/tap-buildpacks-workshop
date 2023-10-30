@@ -1,6 +1,6 @@
 # TAP Buildpacks Workshop
 
-### Pre-requisites
+## Pre-requisites
 * [Kubectl CLI](https://kubernetes.io/docs/tasks/tools/)
 * [Tanzu CLI](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/install-tanzu-cli.html#install-the-tanzu-cli-4)
 * [Tanzu CLI Plugins](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/install-tanzu-cli.html#install-tanzu-cli-plugins-5)
@@ -8,16 +8,16 @@
 * [k9s](https://k9scli.io/topics/install/) (optional)
 * Clone this repo locally. Most of the commands will be executed from this folder and spring-petclinic workload folder.
 
-### Agenda
+## Agenda
 * Introduction & Setup (15 minutes)
 * Why Cloud Native Buildpacks, and what problems are we trying to solve? (10 minutes)
 
-* ## Introduction to Tanzu Build Service (20 minutes)
+## Introduction to Tanzu Build Service (20 minutes)
   * Technical Architecture
   * OSS and TBS Differences
   * Standard build system across On-Prem, Cloud & Azure Spring Apps  Enterprise
 
-* ## [Demo & Walkthrough - Image Build](session-1.md) (25 minutes)
+## [Demo & Walkthrough - Image Build](session-1.md) (25 minutes)
   * Download the Project from the Tanzu Developer Portal
   * Initiate application build with buildpacks & kaniko
   * View Image CR
@@ -27,7 +27,7 @@
   * View/Download SBOM through TDP/ Tanzu Insights CLI
   * Participants to go through the steps above (30 minutes)
 
-* ## [Demo & Walkthrough - Build Customizations](session-2.md) (25 minutes)
+## [Demo & Walkthrough - Build Customizations](session-2.md) (25 minutes)
   * Use a different JRE than BellSoft Liberica 
     * Create Azure Java Buildpack
     * Create new stack to use tiny stack
@@ -35,10 +35,11 @@
   * Bindings - Bind Azure Application Insights APM with workload
   * Participants to go through the steps above (30 minutes)
 
-* ## [Demo & Walkthrough - Patch/Updates at scale](session-3.md) (25 minutes)
+## [Demo & Walkthrough - Patch/Updates at scale](session-3.md) (25 minutes)
   * Update Buildpack Version
   * Update Stack
   * Participants to go through the steps above (30 minutes)
-* ## Feedback & Open Discussion (25 minutes)
 
-**Total Workshop Duration - 4 Hours**
+## Feedback & Open Discussion (25 minutes)
+
+>Total Workshop Duration - 4 Hours**
