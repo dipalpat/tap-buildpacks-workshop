@@ -29,7 +29,7 @@
     * Create custom builder
   * Bindings - Bind Azure Application Insights APM with workload
 * Participants to go through the steps above (30 minutes)
-* Demo & Walkthrough - Patch/Updates at scale (25 minutes)
+* [Demo & Walkthrough - Patch/Updates at scale](session-3.md) (25 minutes)
   * Update Buildpack Version
   * Update Stack
 * Participants to go through the steps above (30 minutes)
