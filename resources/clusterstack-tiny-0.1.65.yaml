@@ -4,10 +4,10 @@ metadata:
   name: tiny-jammy
 spec:
   buildImage:
-    image: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/tiny-jammy-build-0.1.65@sha256:b020931822972b01f7b1a49ede270f0d4763f0bdceaea41a1986662e68cf6427
+    image: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice/tiny-jammy-build-0.1.65@sha256:b020931822972b01f7b1a49ede270f0d4763f0bdceaea41a1986662e68cf6427
   id: io.buildpacks.stacks.jammy.tiny
   runImage:
-    image: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/tiny-jammy-run-0.1.65@sha256:4b16594e4bbb9e3ced98e2b846bad9964ef4e2ace77934d5bce1a15cac9b0bc8
+    image: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice/tiny-jammy-run-0.1.65@sha256:4b16594e4bbb9e3ced98e2b846bad9964ef4e2ace77934d5bce1a15cac9b0bc8
   serviceAccountRef:
     name: dependencies-pull-serviceaccount
     namespace: build-service

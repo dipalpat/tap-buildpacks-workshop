@@ -19,4 +19,4 @@ spec:
   stack:
     kind: ClusterStack
     name: tiny-jammy
-  tag: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice:jammy-openjdk-builder
+  tag: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice:jammy-openjdk-builder

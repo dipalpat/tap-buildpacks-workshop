@@ -9,5 +9,5 @@ spec:
   serviceAccountRef:
     name: dependencies-pull-serviceaccount
     namespace: build-service
-  image: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice/java-azure@sha256:1b2cabe3290a15928d541e16738d4f7bf85dbd903baa500d833bb14d7e08f082
+  image: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice/java-azure@sha256:1b2cabe3290a15928d541e16738d4f7bf85dbd903baa500d833bb14d7e08f082
   # registry.tanzu.vmware.com/tanzu-java-azure-buildpack/java-azure:9.14.0
