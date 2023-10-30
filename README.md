@@ -7,6 +7,8 @@
 * [kp CLI](https://github.com/buildpacks-community/kpack-cli) (optional)
 * [k9s](https://k9scli.io/topics/install/) (optional)
 * Clone this repo locally. Most of the commands will be executed from this folder and spring-petclinic workload folder.
+* TAP enviroment kubeconfig will be provided at the start of the workshop
+> All the instructions have been tested on macOS
 
 ## Agenda
 ## Introduction & Setup (15 minutes)
