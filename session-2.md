@@ -46,16 +46,16 @@ Edit resources/clusterstack-tiny-0.1.65.yaml file and change the name to somethi
 ```shell
 kubectl apply -f resources/clusterstack-tiny-0.1.65.yaml
 ```
-#### Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
-```shell
-TBD
-```
-Replace ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
-``````shell
-serviceAccountRef:
-    name: dependencies-pull-serviceaccount
-    namespace: build-service
-``````
+* Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
+* ```shell
+  TBD
+  ```
+* Replace ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
+* ``````shell
+  serviceAccountRef:
+      name: dependencies-pull-serviceaccount
+      namespace: build-service
+  ``````
 Check the status of clusterstack
 ``````shell
 tanzu build-service clusterstack status your-cluster-stack
@@ -65,9 +65,9 @@ Edit resources/azure-java-builder.yaml file and change the name to something uni
 ```shell
 kubectl apply -f resources/azure-java-builder.yaml
 ```
-``````shell
-Add KP CLI command to generate clusterbuilder resource - TBD
-``````
+* ``````shell
+  Add KP CLI command to generate clusterbuilder resource - TBD
+  ``````
 Check the status of cluster builder
 ``````shell
 tanzu build-service clusterbuilder status your-cluster-builder
