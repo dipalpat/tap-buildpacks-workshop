@@ -18,5 +18,5 @@ spec:
     namespace: kpack
   stack:
     kind: ClusterStack
-    name: default
+    name: tiny-jammy
   tag: europe-west1-docker.pkg.dev/tap-sandbox-dev/tapv-glorious-stinkbug/buildservice:jammy-openjdk-builder

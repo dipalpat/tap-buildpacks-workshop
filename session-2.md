@@ -40,8 +40,27 @@ Check the status of clusterbuildpack
 ``````shell
 tanzu build-service clusterbuildpack status azure-java
 ``````
+### Create ClusterStack Resource
+Edit cluster-tiny-0.1.65.yaml file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+```shell
+kubectl apply -f resources/clusterstack-tiny-0.1.65.yaml
+```
+Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
+```shell
+TBD
+```
+Add ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
+``````shell
+serviceAccountRef:
+    name: dependencies-pull-serviceaccount
+    namespace: build-service
+``````
+Check the status of clusterstack
+``````shell
+tanzu build-service clusterbuildpack status your-cluster-stack
+``````
 ### Create ClusterBuilder Resource
-Edit this file and change the name to something unique ex. jammy-openjdk-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit this file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack anme to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/azure-java-builder.yaml
 ```
