@@ -4,9 +4,14 @@ From the Tanzu Developer Portal, access Accelerators to select the application b
 
 ![acc](accelerators-on-tanzu-dev-portal.png)
 
-Search for ***petclinic*** and hit choose, leave the deploymentType as 'TAP workload' and click Next and Click Generator Accelerator.
+Search for ***petclinic*** and hit choose, leave the deploymentType as 'TAP workload' 
 
 ![acc](petclinic-accelerator.png)
+
+Click Next and Click Generator Accelerator.
+
+![acc](generate-project.png)
+
 
 Dowload the ZIP File and extract the project. Open it in the IDE of your choice.
 
