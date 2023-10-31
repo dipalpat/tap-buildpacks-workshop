@@ -41,7 +41,7 @@ kubectl apply -f resources/azure-java-buildpack-9.13.0.yaml
   ``````
 Check the status of clusterbuildpack
 ``````shell
-tanzu build-service clusterbuildpack status your-clusterbuildpack
+tanzu build-service clusterbuildpack status azure-java-$NS
 ``````
 ### Create ClusterStack Resource
 Edit ***resources/clusterstack-tiny-0.1.65.yaml*** file and change the name to something unique ex. tiny-jammy-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
@@ -60,7 +60,7 @@ kubectl apply -f resources/clusterstack-tiny-0.1.65.yaml
   ``````
 Check the status of clusterstack
 ``````shell
-tanzu build-service clusterstack status your-cluster-stack
+tanzu build-service clusterstack status tiny-jammy-$NS
 ``````
 ### Create ClusterBuilder Resource
 Edit ***resources/azure-java-builder.yaml*** file and change the name to something unique ex. jammy-openjdk-ns1. Change the stack name to reflect your cluster stack you created in earlier step. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
@@ -72,7 +72,7 @@ kubectl apply -f resources/azure-java-builder.yaml
   ``````
 Check the status of cluster builder
 ``````shell
-tanzu build-service clusterbuilder status your-cluster-builder
+tanzu build-service clusterbuilder status jammy-openjdk-$NS
 ``````
 ### Change spring-petclinic workload to use the new clusterbuilder
 Change the clusterBuilder param to match clusterbuilder created earlier.
@@ -83,7 +83,7 @@ tanzu apps workload apply spring-petclinic \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
---param clusterBuilder=jammy-openjdk \
+--param clusterBuilder=jammy-openjdk-$NS \
 --yes
 ```
 ```shell
@@ -107,7 +107,7 @@ tanzu apps workload apply spring-petclinic \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
---param clusterBuilder=jammy-openjdk \
+--param clusterBuilder=jammy-openjdk-$NS \
 --param-yaml buildServiceBindings='[{"name": "azure-insights-build-bindings", "kind": "Secret"}]' \
 --yes
 ```
@@ -128,7 +128,7 @@ tanzu apps workload apply spring-petclinic \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
---param clusterBuilder=jammy-openjdk \
+--param clusterBuilder=jammy-openjdk-$NS \
 --param-yaml buildServiceBindings='[{"name": "azure-insights-build-bindings", "kind": "Secret"}]' \
 --service-ref service-binding-name=v1:Secret:azure-runtime-bindings \
 --yes

@@ -12,7 +12,11 @@ kp clusterbuildpack create azure-java --image europe-west4-docker.pkg.dev/tap-sa
 ```
 ### Review Azure Java Buildpack Status
 ```shell
-tanzu build-service clusterbuildpack status azure-java
+tanzu build-service clusterbuildpack status azure-java-$NS
+```
+Change the version in ***resources/azure-java-builder.yaml*** to 9.14.0
+```shell
+kubectl apply -f resources/azure-java-builder.yaml
 ```
 ### Check the latest build logs
 ```shell
@@ -25,7 +29,7 @@ kubectl apply -f resources/clusterstack-tiny-0.1.66.yaml
 ```
 ### Review ClusterStack Status
 ```shell
-tanzu build-service clusterstack status your-cluster-stack
+tanzu build-service clusterstack status tiny-jammy-$NS
 ```
 ### Check the latest build logs
 ```shell
