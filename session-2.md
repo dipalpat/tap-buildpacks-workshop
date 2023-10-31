@@ -25,7 +25,7 @@ tanzu build-service clusterbuilders status default
 ```
 ## Swap Bellsoft Liberica with Azure Java
 ### Create ClusterBuildpack Resource
-Edit resources/azure-java-buildpack-9.0.13.yaml file and change the name to something unique ex. azure-java-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
+Edit ***resources/azure-java-buildpack-9.13.0.yaml*** file and change the name to something unique ex. azure-java-ns1. This is so that we can exercise builpack and builder update for every attendee and avoid overriding resources that others create.
 ```shell
 kubectl apply -f resources/azure-java-buildpack-9.13.0.yaml
 ```
