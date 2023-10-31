@@ -19,4 +19,4 @@ spec:
   stack:
     kind: ClusterStack
     name: tiny-jammy-$NS
-  tag: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice:jammy-openjdk-builder
+  tag: europe-west4-docker.pkg.dev/tap-sandbox-dev/tapv-proud-corgi/buildservice:jammy-openjdk-builder
