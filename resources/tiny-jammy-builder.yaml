@@ -18,4 +18,4 @@ spec:
   stack:
     kind: ClusterStack
     name: tiny-jammy
-  tag: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice:tiny-jammy
+  tag: europe-west4-docker.pkg.dev/tap-sandbox-dev/tapv-proud-corgi/buildservice:tiny-jammy

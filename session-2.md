@@ -31,7 +31,7 @@ kubectl apply -f resources/azure-java-buildpack-9.13.0.yaml
 ```
 * Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
 * ```shell
-  kp clusterbuildpack create azure-java --image us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice/java-azure@sha256:4e677d8bfa9ffc0ddc2b4ae11b718b5b2d9f64b06867088ac2be7ed6708ef80d  --dry-run --output yaml > azure-java-9.13.0.yaml
+  kp clusterbuildpack create azure-java --image europe-west4-docker.pkg.dev/tap-sandbox-dev/tapv-proud-corgi/buildservice/java-azure@sha256:4e677d8bfa9ffc0ddc2b4ae11b718b5b2d9f64b06867088ac2be7ed6708ef80d  --dry-run --output yaml > azure-java-9.13.0.yaml
   ```
   Replace ServiceAccountRef under spec to the file before applying if you are using YAML created by kp cli
   ``````shell
