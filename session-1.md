@@ -13,7 +13,7 @@ Click Next and Click Generator Accelerator.
 ![acc](images/generate-project.png)
 
 
-Dowload the ZIP File and extract the project. Open it in the IDE of your choice.
+Dowload the ZIP File.
 
 ![acc](images/download-project.png)
 
