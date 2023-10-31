@@ -18,6 +18,11 @@ Dowload the ZIP File and extract the project. Open it in the IDE of your choice.
 ![acc](images/download-project.png)
 
 ### Tanzu Workload Apply with Cloud Native Buildpacks
+```
+cd ~/Downloads
+unzip ~/Downloads/spring-pet-clinic.zip
+cd ~/Downloads/spring-pet-clinic
+```
 ```shell
 tanzu apps workload apply spring-petclinic \
 --build-env BP_JVM_VERSION=17 \
