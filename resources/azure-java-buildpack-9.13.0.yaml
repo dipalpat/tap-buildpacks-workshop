@@ -2,7 +2,7 @@
 apiVersion: kpack.io/v1alpha2
 kind: ClusterBuildpack
 metadata:
-  name: azure-java
+  name: azure-java-$NS
   annotations:
     version: 9.13.0
 spec:

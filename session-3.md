@@ -4,7 +4,7 @@ This section relies on setup done in Session 2.
 ## Update Azure Java Buildpack to 9.14.0 from 9.13.0
 Change the name in ***resources/azure-java-buildpack-9.0.14.yaml*** to match the clusterbuildpack create in session 2 ex azure-java-ns1. This will ensure only your resource is updated.
 ```shell
-kubectl apply -f resources/azure-java-buildpack-9.0.14.yaml
+kubectl apply -f resources/azure-java-buildpack-9.14.0.yaml
 ```
 Alternatively, you can use kp cli to create clusterbuildpack resource. Adjust the image as per your environment. 
 ```shell

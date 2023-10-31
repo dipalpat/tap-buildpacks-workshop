@@ -1,7 +1,7 @@
 apiVersion: kpack.io/v1alpha2
 kind: ClusterStack
 metadata:
-  name: tiny-jammy
+  name: tiny-jammy-$NS
 spec:
   buildImage:
     image: us-central1-docker.pkg.dev/tap-sandbox-dev/tapv-pro-snapper/buildservice/tiny-jammy-build-0.1.65@sha256:b020931822972b01f7b1a49ede270f0d4763f0bdceaea41a1986662e68cf6427
