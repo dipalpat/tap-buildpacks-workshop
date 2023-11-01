@@ -128,7 +128,7 @@ tanzu apps workload apply spring-petclinic \
 --annotation autoscaling.knative.dev/minScale=1 \
 --label app.kubernetes.io/part-of=petclinic \
 --label apps.tanzu.vmware.com/has-tests="true" \
---param clusterBuilder=jammy-openjdk-$NS \
+--param clusterBuilder=jammy-openjdk-NS^ \
 --param-yaml buildServiceBindings='[{"name": "azure-insights-build-bindings", "kind": "Secret"}]' \
 --service-ref service-binding-name=v1:Secret:azure-runtime-bindings \
 --yes
