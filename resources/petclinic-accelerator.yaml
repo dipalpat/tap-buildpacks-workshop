@@ -6,5 +6,5 @@ metadata:
 spec:
   git:
     ref:
-      branch: accelerator
-    url: https://github.com/jlafata/spring-petclinic.git
+      branch: main
+    url: https://github.com/dipalpat/spring-petclinic
